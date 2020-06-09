@@ -1,0 +1,8 @@
+SAVE_DIR = "/tmp/"
+
+FOLLOWED_AUTHORS = [
+    "Einstein",
+    "Feynman",
+    "Newton",
+]
+
