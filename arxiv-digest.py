@@ -24,7 +24,6 @@ start_date = str(start_date.date())
 end_date = str(end_date.date())
 
 
-
 def print_group_dict(d, with_authors=False):
     d["title"] = d["title"].replace("\n", "", 10)
     d["authors"] = d["authors"].replace("\n", "", 10)
@@ -52,6 +51,6 @@ for m in matches:
             out += "\n" + "*" * 50 + "\n"
 out += f"Today were {author_matches} author matches registered.\n"
 
-os.makedirs(SAVE_DIR, exist_ok = True)
+os.makedirs(SAVE_DIR, exist_ok=True)
 with open(f"{SAVE_DIR}/arxiv-digest-{end_date}.txt", "w") as f:
     f.write(out)
