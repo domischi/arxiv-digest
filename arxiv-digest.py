@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import re
 import sys
 import os
@@ -6,6 +6,9 @@ import datetime
 from settings import FOLLOWED_AUTHORS, SAVE_DIR
 
 s = sys.stdin.read().replace("\r", "", int(1e6))
+#with open('ar.txt', 'r') as f:
+#    s=f.read()
+#s=s.replace("\r", "", int(1e6))
 
 out = ""
 
