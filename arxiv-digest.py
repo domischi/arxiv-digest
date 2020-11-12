@@ -12,7 +12,7 @@ s = sys.stdin.read().replace("\r", "", int(1e6))
 
 out = ""
 
-MATCHING_REGEX = "arXiv:(?P<arxiv_id>\d\d\d\d\.\d\d\d\d\d).*?Title: (?P<title>.*?)\nAuthors: (?P<authors>.*?)\nCategories:"
+MATCHING_REGEX = "^arXiv:(?P<arxiv_id>\d\d\d\d\.\d\d\d\d\d).*?Title: (?P<title>.*?)\nAuthors: (?P<authors>.*?)\nCategories:"
 DATE_REGEX = "received from  (?P<start_date_string>.*)  to  (?P<end_date_string>.*)"
 
 matches = re.finditer(DATE_REGEX, s)
