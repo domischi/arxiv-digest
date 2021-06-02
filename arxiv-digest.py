@@ -52,8 +52,9 @@ for m in matches:
             out += "\n" + "*" * 50 + "\n" + f"{a} published something:\n"
             out += print_group_dict(d, with_authors=True)
             out += "\n" + "*" * 50 + "\n"
-out += f"Today were {author_matches} author matches registered.\n"
+out += f"Today were {author_matches} author matches registered."
+out += '\n'*5
 
 os.makedirs(SAVE_DIR, exist_ok=True)
-with open(f"{SAVE_DIR}/arxiv-digest-{end_date}.txt", "w") as f:
+with open(f"{SAVE_DIR}/arxiv-digest-{end_date}.txt", "a") as f:
     f.write(out)
