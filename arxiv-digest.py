@@ -37,9 +37,12 @@ def print_group_dict(d, with_authors=False):
 
 
 matches = re.finditer(MATCHING_REGEX, s, flags=re.DOTALL | re.MULTILINE)
-for m in matches:
+for i,m in enumerate(matches):
     d = m.groupdict()
     out += print_group_dict(d)
+    ## Add an empty line every 16 entries, just to make it more readable
+    if i-1%16==0:
+        print('')
 
 author_matches = 0
 matches = re.finditer(MATCHING_REGEX, s, flags=re.DOTALL | re.MULTILINE)
