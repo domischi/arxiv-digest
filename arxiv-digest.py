@@ -42,7 +42,7 @@ for i,m in enumerate(matches):
     out += print_group_dict(d)
     ## Add an empty line every 16 entries, just to make it more readable
     if i-1%16==0:
-        print('')
+        out += '\n'
 
 author_matches = 0
 matches = re.finditer(MATCHING_REGEX, s, flags=re.DOTALL | re.MULTILINE)
