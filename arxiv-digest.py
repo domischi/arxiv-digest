@@ -41,7 +41,7 @@ for i,m in enumerate(matches):
     d = m.groupdict()
     out += print_group_dict(d)
     ## Add an empty line every 16 entries, just to make it more readable
-    if i-1%16==0:
+    if (i+1)%16==0:
         out += '\n'
 
 author_matches = 0
